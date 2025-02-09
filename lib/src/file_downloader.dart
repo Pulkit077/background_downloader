@@ -682,7 +682,10 @@ interface class FileDownloader {
   /// [running] is the notification used while the task is in progress
   /// [complete] is the notification used when the task completed
   /// [error] is the notification used when something went wrong,
-  /// including pause, failed and notFound status
+  /// including failed and notFound status
+  /// [paused] is the notification shown when the task is paused
+  /// [canceled] is the notification shown when the task is canceled programmatically
+  ///    or by the user via a notification button
   /// [progressBar] if set will show a progress bar
   /// [tapOpensFile] if set will attempt to open the file when the [complete]
   ///     notification is tapped
@@ -720,6 +723,7 @@ interface class FileDownloader {
       TaskNotification? complete,
       TaskNotification? error,
       TaskNotification? paused,
+      TaskNotification? canceled,
       bool progressBar = false,
       bool tapOpensFile = false,
       String groupNotificationId = ''}) {
@@ -729,6 +733,7 @@ interface class FileDownloader {
         complete: complete,
         error: error,
         paused: paused,
+        canceled: canceled,
         progressBar: progressBar,
         tapOpensFile: tapOpensFile,
         groupNotificationId: groupNotificationId));
@@ -744,7 +749,10 @@ interface class FileDownloader {
   /// [running] is the notification used while the task is in progress
   /// [complete] is the notification used when the task completed
   /// [error] is the notification used when something went wrong,
-  /// including pause, failed and notFound status
+  /// including failed and notFound status
+  /// [paused] is the notification shown when the task is paused
+  /// [canceled] is the notification shown when the task is canceled programmatically
+  ///    or by the user via a notification button
   /// [progressBar] if set will show a progress bar
   /// [tapOpensFile] if set will attempt to open the file when the [complete]
   ///     notification is tapped
@@ -782,6 +790,7 @@ interface class FileDownloader {
       TaskNotification? complete,
       TaskNotification? error,
       TaskNotification? paused,
+      TaskNotification? canceled,
       bool progressBar = false,
       bool tapOpensFile = false,
       String groupNotificationId = ''}) {
@@ -791,6 +800,7 @@ interface class FileDownloader {
         complete: complete,
         error: error,
         paused: paused,
+        canceled: canceled,
         progressBar: progressBar,
         tapOpensFile: tapOpensFile,
         groupNotificationId: groupNotificationId));
@@ -806,7 +816,10 @@ interface class FileDownloader {
   /// [running] is the notification used while the task is in progress
   /// [complete] is the notification used when the task completed
   /// [error] is the notification used when something went wrong,
-  /// including pause, failed and notFound status
+  /// including failed and notFound status
+  /// [paused] is the notification shown when the task is paused
+  /// [canceled] is the notification shown when the task is canceled programmatically
+  ///    or by the user via a notification button
   /// [progressBar] if set will show a progress bar
   /// [tapOpensFile] if set will attempt to open the file when the [complete]
   ///     notification is tapped
@@ -844,6 +857,7 @@ interface class FileDownloader {
       TaskNotification? complete,
       TaskNotification? error,
       TaskNotification? paused,
+      TaskNotification? canceled,
       bool progressBar = false,
       bool tapOpensFile = false,
       String groupNotificationId = ''}) {
@@ -853,6 +867,7 @@ interface class FileDownloader {
         complete: complete,
         error: error,
         paused: paused,
+        canceled: canceled,
         progressBar: progressBar,
         tapOpensFile: tapOpensFile,
         groupNotificationId: groupNotificationId));
